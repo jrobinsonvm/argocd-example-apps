@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -12,7 +12,6 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
-        version: v1
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
